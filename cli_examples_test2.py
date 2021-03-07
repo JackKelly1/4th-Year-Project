@@ -72,7 +72,7 @@ def load_common_data(equipment_filename, topology_filename, simulation_filename,
             print(f'{ansi_escapes.blue}Raw network (no optimizations) saved to {save_raw_network_filename}{ansi_escapes.reset}')
         sim_params = SimParams(**load_json(simulation_filename)) if simulation_filename is not None else None
 #         print(dir(sim_params._nli_params))
-#         sim_params._nli_params.computed_channels.replace = currentChannels
+        sim_params._nli_params._computed_channels = currentChannels
         if not sim_params:
             if next((node for node in network if isinstance(node, RamanFiber)), None) is not None:
                 print(f'{ansi_escapes.red}Invocation error:{ansi_escapes.reset} '
@@ -485,12 +485,6 @@ def channelSetter(ch_list_np):
     currentChannels = [int(i) for i in currentChannels]
     return currentChannels
 
-ch_list = [0 for i in range(1,41)]
-for i in range(1,41,2):
-    ch_list[i] = 1
-ch_list_np = np.array(ch_list)
-currentChannels = channelSetter(ch_list_np)
-print(currentChannels)
 
 # instantiateWriteFile()
 # for i in range(100):
@@ -502,12 +496,24 @@ print(currentChannels)
 #         a.insert(0, launch_power)
 #         add_row_of_data(file_name, a)
 
-# show_example_data_dir()
-# load_common_data() CALLED IN transmission_main_example()
-# _add_common_options() CALLED in transmission_main_example()
+
+labels = createLabels(40)
+instantiateWriteFile()
+ch_list = [0 for i in range(40)]
+for i in range(40):
+    ch_list[i] = 1
+ch_list_np = np.array(ch_list)
+currentChannels = channelSetter(ch_list_np)
+print(currentChannels)
 values, values1 = transmission_main_example()
-print(values)
-print(values1)
+
+power_value = [8]
+list_of_elem = power_value + ch_list + values
+file_name = '/Users/jackkelly/Desktop/oopt-gnpy-master/gnpy/tools/myfile.csv'
+add_row_of_data(file_name, list_of_elem)
+
+
+
 
 # TO DO:
 # 1. Changee the arguments in transmission_main_example.py to accept power and files
