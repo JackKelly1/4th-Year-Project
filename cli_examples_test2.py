@@ -33,17 +33,14 @@ from gnpy.tools.json_io import load_equipment, load_network, load_json, load_req
                                requests_from_json, disjunctions_from_json, save_json
 from gnpy.tools.plots import plot_baseline, plot_results
 
-# modules to ease data handling
-import pandas as pd 
+
+import pandas as pd
 import csv
 import math
 import numpy as np
 import matplotlib.pyplot as plt
 import time
 import random
-
-# function to append dict to rows of simulation_results
-from csv import DictWriter
 
 _logger = logging.getLogger(__name__)
 _examples_dir = Path(__file__).resolve().parent.parent / 'example-data'
@@ -71,7 +68,6 @@ def load_common_data(equipment_filename, topology_filename, simulation_filename,
             save_network(network, save_raw_network_filename)
             print(f'{ansi_escapes.blue}Raw network (no optimizations) saved to {save_raw_network_filename}{ansi_escapes.reset}')
         sim_params = SimParams(**load_json(simulation_filename)) if simulation_filename is not None else None
-#         print(dir(sim_params._nli_params))
         sim_params._nli_params._computed_channels = currentChannels
         if not sim_params:
             if next((node for node in network if isinstance(node, RamanFiber)), None) is not None:
@@ -486,34 +482,41 @@ def channelSetter(ch_list_np):
     return currentChannels
 
 
-# instantiateWriteFile()
-# for i in range(100):
-#     for j in range(1,41):
-#         launch_power = round(random.random(), 2)
-#         launch_power = 7.5 + (launch_power * (9.5 - 7.5))
-#         a = [1 if k<j else 0 for k in range(40)]
-#         random.shuffle(a)
-#         a.insert(0, launch_power)
-#         add_row_of_data(file_name, a)
+# ch_list = [0 for i in range(40)]
+# for i in range(40):
+#     ch_list[i] = 1
+# ch_list_np = np.array(ch_list)
+# currentChannels = channelSetter(ch_list_np)
+# print(currentChannels)
+# values, values1 = transmission_main_example()
 
+# power_value = [8]
+# list_of_elem = power_value + ch_list + values
+# file_name = '/Users/jackkelly/Desktop/oopt-gnpy-master/gnpy/tools/myfile.csv'
+# add_row_of_data(file_name, list_of_elem)
 
 labels = createLabels(40)
 instantiateWriteFile()
-ch_list = [0 for i in range(40)]
-for i in range(40):
-    ch_list[i] = 1
-ch_list_np = np.array(ch_list)
-currentChannels = channelSetter(ch_list_np)
-print(currentChannels)
-values, values1 = transmission_main_example()
-
-power_value = [8]
-list_of_elem = power_value + ch_list + values
 file_name = '/Users/jackkelly/Desktop/oopt-gnpy-master/gnpy/tools/myfile.csv'
-add_row_of_data(file_name, list_of_elem)
 
-
-
+for iterations in range(1):
+    for j in range(1, 41):
+        print('-------------------------------')
+        print('ITERATION NUMBER: ' + str(j))
+        print('-------------------------------')
+        launch_power = round(random.random(), 2)
+        launch_power = 7.5 + (launch_power * (9.5 - 7.5))
+        ch_list = [1 if k<j else 0 for k in range(40)]
+        random.shuffle(ch_list)
+        ch_list_np = np.array(ch_list)
+        currentChannels = channelSetter(ch_list_np)
+        values, values1 = transmission_main_example()
+        values = values * ch_list_np
+        values = values.tolist()
+        list_of_elem = [launch_power] + ch_list + values
+        add_row_of_data(file_name, list_of_elem)
 
 # TO DO:
-# 1. Changee the arguments in transmission_main_example.py to accept power and files
+# 1. Change the arguments in transmission_main_example.py to accept power
+# 2. Change length of link in raman file
+# 3. Remove printing to the terminal
