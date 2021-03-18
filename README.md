@@ -1,3 +1,3 @@
 # 4th-Year-Project
 
-Run using: python cli_examples_test2.py /Users/jackkelly/Desktop/oopt-gnpy-master/gnpy/example-data/raman_edfa_example_network-1.json -e /Users/jackkelly/Desktop/oopt-gnpy-master/gnpy/example-data/my_eqpt_config.json --sim-params /Users/jackkelly/Desktop/oopt-gnpy-master/gnpy/example-data/my_sim_params.json
+Run using: python generate_data.py /Users/jackkelly/Desktop/oopt-gnpy-master/gnpy/example-data/TOPOLOGY.json -e /Users/jackkelly/Desktop/oopt-gnpy-master/gnpy/example-data/EQUIPMENT_CONFIG.json --sim-params /Users/jackkelly/Desktop/oopt-gnpy-master/gnpy/example-data/SIMULATION_PARAMS.json
