@@ -459,68 +459,58 @@ def path_requests_run(args=None):
             print(f'{ansi_escapes.red}Cannot save output: neither JSON nor CSV file{ansi_escapes.reset}')
             sys.exit(1)
 
-# MY CODE
-def createLabels(channel_number):
+
+def createLabels(channel_no):
     labels = ['launch_power_dbm']
-    for i in range(1, channel_number+1):
+    for i in range(1, channel_no+1):
         labels.append('Status_Ch' + str(i))
-    for i in range(1, channel_number+1):
+    for i in range(1, channel_no+1):
         labels.append('snr_Ch' + str(i))
     return labels
 
 def instantiateWriteFile():
-    with open('/Users/jackkelly/Desktop/oopt-gnpy-master/gnpy/tools/myfile.csv', 'w', newline='') as file:
+    with open('/Users/jackkelly/Desktop/Building_Model/Data/myfile.csv', 'w', newline='') as file:
         writer = csv.writer(file)
         # 51 input variables in total
         writer.writerow(labels)
         
-def add_row_of_data(file_name, list_of_elem):
-    with open(file_name, 'a+', newline='') as file:
+def add_row_of_data(file_path, list_of_elem):
+    with open(file_path, 'a+', newline='') as file:
         writer = csv.writer(file)
         writer.writerow(list_of_elem)
         
 def channelSetter(ch_list_np):
-    channels = [i for i in range(1,31)]
+    channels = [i for i in range(1,channel_no+1)]
     currentChannels = [zero for zero in ch_list_np*channels if zero != 0]
     currentChannels = [int(i) for i in currentChannels]
     return currentChannels
 
 
-# ch_list = [0 for i in range(40)]
-# for i in range(40):
-#     ch_list[i] = 1
-# ch_list_np = np.array(ch_list)
-# currentChannels = channelSetter(ch_list_np)
-# print(currentChannels)
-# values, values1 = transmission_main_example()
-
-# power_value = [8]
-# list_of_elem = power_value + ch_list + values
-# file_name = '/Users/jackkelly/Desktop/oopt-gnpy-master/gnpy/tools/myfile.csv'
-# add_row_of_data(file_name, list_of_elem)
-
 # Start timing of data generation
 start_time = time.time()
 
-labels = createLabels(30)
+channel_no = 40
+labels = createLabels(channel_no)
 instantiateWriteFile()
-file_name = '/Users/jackkelly/Desktop/oopt-gnpy-master/gnpy/tools/myfile.csv'
+file_path = '/Users/jackkelly/Desktop/Building_Model/Data/myfile.csv'
 
-for iterations in range(1):
-    for j in range(1, 31):
+data_number = 0
+while data_number < 10000:
+    for iteration in range(1, channel_no+1):
         print('-------------------------------')
-        print('ITERATION NUMBER: ' + str(j))
+        print('Row of data number: ', data_number)
         print('-------------------------------')
-        ch_list = [1 if k<j else 0 for k in range(30)]
+        ch_list = [1 if k<iteration else 0 for k in range(channel_no)]
         random.shuffle(ch_list)
         ch_list_np = np.array(ch_list)
         currentChannels = channelSetter(ch_list_np)
         values, values1, input_power = transmission_main_example()
-#       remove zero 0dB channels
+    #   remove zero 0dB channels
         values = values * ch_list_np
-#       convert from numpy array to list for addition
+    #   convert from numpy array to list for addition
         values = values.tolist()
         list_of_elem = [input_power] + ch_list + values
-        add_row_of_data(file_name, list_of_elem)
+        add_row_of_data(file_path, list_of_elem)
+        data_number += 1
 
 print("--- %s seconds ---" % (time.time() - start_time))
