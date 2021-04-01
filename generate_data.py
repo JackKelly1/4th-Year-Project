@@ -254,6 +254,7 @@ def transmission_main_example(args=None):
                 print(f'\nTransmission result for input power = {lin2db(req.power*1e3):.2f} dBm:')
             else:
                 print(f'\nTransmission results:')
+            print(destination.snr_01nm)
             print(f'  Final SNR total (0.1 nm): {ansi_escapes.cyan}{mean(destination.snr_01nm):.02f} dB{ansi_escapes.reset}')
         else:
             print(path[-1])
@@ -486,49 +487,41 @@ def channelSetter(ch_list_np):
     return currentChannels
 
 
+###Test single channel###
+
+
+
 # Start timing of data generation
 start_time = time.time()
 
 channel_no = 40
+data_number = 40
+iteration_no = data_number//channel_no
 labels = createLabels(channel_no)
 instantiateWriteFile()
 file_path = '/Users/jackkelly/Desktop/Building_Model/Data/myfile.csv'
+# iteration_no = 1
 
-# data_number = 0
-# while data_number < 10000:
-#     for iteration in range(1, channel_no+1):
-#         print('-------------------------------')
-#         print('Row of data number: ', data_number)
-#         print('-------------------------------')
-#         ch_list = [1 if k<iteration else 0 for k in range(channel_no)]
-#         random.shuffle(ch_list)
-#         ch_list_np = np.array(ch_list)
-#         currentChannels = channelSetter(ch_list_np)
-#         values, values1, input_power = transmission_main_example()
-#     #   remove zero 0dB channels
-#         values = values * ch_list_np
-#     #   convert from numpy array to list for addition
-#         values = values.tolist()
-#         list_of_elem = [input_power] + ch_list + values
-#         add_row_of_data(file_path, list_of_elem)
-#         data_number += 1
-
+# GENERATE DATA IN BLOCKS
 for cur_Channel_Number in range(0, channel_no):
-    for iteration in range(1,(10000//channel_no)+1):
+# for cur_Channel_Number in range(1):
+    for iteration in range(1,iteration_no+1):
+#     for iteration in range(1):
         print('-------------------------------')
-        print('Row of data number: ', (cur_Channel_Number*iteration + iteration))
+        print('Row of data number: ', (cur_Channel_Number*iteration_no + iteration))
         print('-------------------------------')
         ch_list = [1]*channel_no
-        ch_list = [k if index<cur_Channel_Number else 0 for index, k in enumerate(ch_list)]
+        ch_list = [k if index<=cur_Channel_Number else 0 for index, k in enumerate(ch_list)]
         random.shuffle(ch_list)
         ch_list_np = np.array(ch_list)
         currentChannels = channelSetter(ch_list_np)
         values, input_power = transmission_main_example()
-    #   remove zero 0dB channels
+        #   remove zero 0dB channels
         values = values * ch_list_np
-    #   convert from numpy array to list for addition
+        #   convert from numpy array to list for addition
         values = values.tolist()
         list_of_elem = [input_power] + ch_list + values
         add_row_of_data(file_path, list_of_elem)
+####
 
 print("--- %s seconds ---" % (time.time() - start_time))
