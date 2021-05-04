@@ -1,6 +1,6 @@
 # 4th-Year-Project
 
-Clone the repo using: git clone git@github.com:JackKelly1/4th-Year-Project.git
+Clone the repo using: git clone https://github.com/JackKelly1/4th-Year-Project.git
 
 Jupyter notebook .ipynb files contain the neural network related code
 
