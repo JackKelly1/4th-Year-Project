@@ -1,0 +1,866 @@
+{
+  "elements": [
+    {
+      "uid": "Site_A",
+      "type": "Transceiver",
+      "metadata": {
+        "location": {
+          "latitude": 0,
+          "longitude": 0,
+          "city": "Site A",
+          "region": ""
+        }
+      }
+    },
+    {
+      "uid": "Span1",
+      "type": "RamanFiber",
+      "type_variety": "SSMF",
+      "operational": {
+        "temperature": 283,
+        "raman_pumps": [
+          {
+            "power": 200e-3,
+            "frequency": 205e12,
+            "propagation_direction": "counterprop"
+          },
+          {
+            "power": 206e-3,
+            "frequency": 201e12,
+            "propagation_direction": "counterprop"
+          }
+        ]
+      },
+      "params": {
+        "type_variety": "SSMF",
+        "length": 80.0,
+        "loss_coef": 0.2,
+        "length_units": "km",
+        "att_in": 0,
+        "con_in": 0.5,
+        "con_out": 0.5
+      },
+      "metadata": {
+        "location": {
+          "latitude": 1,
+          "longitude": 0,
+          "city": null,
+          "region": ""
+        }
+      }
+    },
+    {
+      "uid": "Edfa1",
+      "type": "Edfa",
+      "type_variety": "std_low_gain",
+      "operational": {
+        "gain_target": 15.0,
+        "delta_p": -2,
+        "tilt_target": 0,
+        "out_voa": 0
+      },
+      "metadata": {
+        "location": {
+          "latitude": 2,
+          "longitude": 0,
+          "city": null,
+          "region": ""
+        }
+      }
+    },
+    {
+      "uid": "Span2",
+      "type": "RamanFiber",
+      "type_variety": "SSMF",
+      "operational": {
+        "temperature": 283,
+        "raman_pumps": [
+          {
+            "power": 200e-3,
+            "frequency": 205e12,
+            "propagation_direction": "counterprop"
+          },
+          {
+            "power": 206e-3,
+            "frequency": 201e12,
+            "propagation_direction": "counterprop"
+          }
+        ]
+      },
+      "params": {
+        "type_variety": "SSMF",
+        "length": 80.0,
+        "loss_coef": 0.2,
+        "length_units": "km",
+        "att_in": 0,
+        "con_in": 0.5,
+        "con_out": 0.5
+      },
+      "metadata": {
+        "location": {
+          "latitude": 3,
+          "longitude": 0,
+          "city": null,
+          "region": ""
+        }
+      }
+    },
+    {
+      "uid": "Edfa2",
+      "type": "Edfa",
+      "type_variety": "std_low_gain",
+      "operational": {
+        "gain_target": 15.0,
+        "delta_p": -2,
+        "tilt_target": 0,
+        "out_voa": 0
+      },
+      "metadata": {
+        "location": {
+          "latitude": 4,
+          "longitude": 0,
+          "city": null,
+          "region": ""
+        }
+      }
+    },
+    {
+      "uid": "Span3",
+      "type": "RamanFiber",
+      "type_variety": "SSMF",
+      "operational": {
+        "temperature": 283,
+        "raman_pumps": [
+          {
+            "power": 200e-3,
+            "frequency": 205e12,
+            "propagation_direction": "counterprop"
+          },
+          {
+            "power": 206e-3,
+            "frequency": 201e12,
+            "propagation_direction": "counterprop"
+          }
+        ]
+      },
+      "params": {
+        "type_variety": "SSMF",
+        "length": 80.0,
+        "loss_coef": 0.2,
+        "length_units": "km",
+        "att_in": 0,
+        "con_in": 0.5,
+        "con_out": 0.5
+      },
+      "metadata": {
+        "location": {
+          "latitude": 5,
+          "longitude": 0,
+          "city": null,
+          "region": ""
+        }
+      }
+    },
+    {
+      "uid": "Edfa3",
+      "type": "Edfa",
+      "type_variety": "std_low_gain",
+      "operational": {
+        "gain_target": 15.0,
+        "delta_p": -2,
+        "tilt_target": 0,
+        "out_voa": 0
+      },
+      "metadata": {
+        "location": {
+          "latitude": 6,
+          "longitude": 0,
+          "city": null,
+          "region": ""
+        }
+      }
+    },
+    {
+      "uid": "Span4",
+      "type": "RamanFiber",
+      "type_variety": "SSMF",
+      "operational": {
+        "temperature": 283,
+        "raman_pumps": [
+          {
+            "power": 200e-3,
+            "frequency": 205e12,
+            "propagation_direction": "counterprop"
+          },
+          {
+            "power": 206e-3,
+            "frequency": 201e12,
+            "propagation_direction": "counterprop"
+          }
+        ]
+      },
+      "params": {
+        "type_variety": "SSMF",
+        "length": 80.0,
+        "loss_coef": 0.2,
+        "length_units": "km",
+        "att_in": 0,
+        "con_in": 0.5,
+        "con_out": 0.5
+      },
+      "metadata": {
+        "location": {
+          "latitude": 7,
+          "longitude": 0,
+          "city": null,
+          "region": ""
+        }
+      }
+    },
+    {
+      "uid": "Edfa4",
+      "type": "Edfa",
+      "type_variety": "std_low_gain",
+      "operational": {
+        "gain_target": 15.0,
+        "delta_p": -2,
+        "tilt_target": 0,
+        "out_voa": 0
+      },
+      "metadata": {
+        "location": {
+          "latitude": 8,
+          "longitude": 0,
+          "city": null,
+          "region": ""
+        }
+      }
+    },
+    {
+      "uid": "Span5",
+      "type": "RamanFiber",
+      "type_variety": "SSMF",
+      "operational": {
+        "temperature": 283,
+        "raman_pumps": [
+          {
+            "power": 200e-3,
+            "frequency": 205e12,
+            "propagation_direction": "counterprop"
+          },
+          {
+            "power": 206e-3,
+            "frequency": 201e12,
+            "propagation_direction": "counterprop"
+          }
+        ]
+      },
+      "params": {
+        "type_variety": "SSMF",
+        "length": 80.0,
+        "loss_coef": 0.2,
+        "length_units": "km",
+        "att_in": 0,
+        "con_in": 0.5,
+        "con_out": 0.5
+      },
+      "metadata": {
+        "location": {
+          "latitude": 9,
+          "longitude": 0,
+          "city": null,
+          "region": ""
+        }
+      }
+    },
+    {
+      "uid": "Edfa5",
+      "type": "Edfa",
+      "type_variety": "std_low_gain",
+      "operational": {
+        "gain_target": 15.0,
+        "delta_p": -2,
+        "tilt_target": 0,
+        "out_voa": 0
+      },
+      "metadata": {
+        "location": {
+          "latitude": 10,
+          "longitude": 0,
+          "city": null,
+          "region": ""
+        }
+      }
+    },
+    {
+      "uid": "Span6",
+      "type": "RamanFiber",
+      "type_variety": "SSMF",
+      "operational": {
+        "temperature": 283,
+        "raman_pumps": [
+          {
+            "power": 200e-3,
+            "frequency": 205e12,
+            "propagation_direction": "counterprop"
+          },
+          {
+            "power": 206e-3,
+            "frequency": 201e12,
+            "propagation_direction": "counterprop"
+          }
+        ]
+      },
+      "params": {
+        "type_variety": "SSMF",
+        "length": 80.0,
+        "loss_coef": 0.2,
+        "length_units": "km",
+        "att_in": 0,
+        "con_in": 0.5,
+        "con_out": 0.5
+      },
+      "metadata": {
+        "location": {
+          "latitude": 11,
+          "longitude": 0,
+          "city": null,
+          "region": ""
+        }
+      }
+    },
+    {
+      "uid": "Edfa6",
+      "type": "Edfa",
+      "type_variety": "std_low_gain",
+      "operational": {
+        "gain_target": 15.0,
+        "delta_p": -2,
+        "tilt_target": 0,
+        "out_voa": 0
+      },
+      "metadata": {
+        "location": {
+          "latitude": 12,
+          "longitude": 0,
+          "city": null,
+          "region": ""
+        }
+      }
+    },
+    {
+      "uid": "Span7",
+      "type": "RamanFiber",
+      "type_variety": "SSMF",
+      "operational": {
+        "temperature": 283,
+        "raman_pumps": [
+          {
+            "power": 200e-3,
+            "frequency": 205e12,
+            "propagation_direction": "counterprop"
+          },
+          {
+            "power": 206e-3,
+            "frequency": 201e12,
+            "propagation_direction": "counterprop"
+          }
+        ]
+      },
+      "params": {
+        "type_variety": "SSMF",
+        "length": 80.0,
+        "loss_coef": 0.2,
+        "length_units": "km",
+        "att_in": 0,
+        "con_in": 0.5,
+        "con_out": 0.5
+      },
+      "metadata": {
+        "location": {
+          "latitude": 13,
+          "longitude": 0,
+          "city": null,
+          "region": ""
+        }
+      }
+    },
+    {
+      "uid": "Edfa7",
+      "type": "Edfa",
+      "type_variety": "std_low_gain",
+      "operational": {
+        "gain_target": 15.0,
+        "delta_p": -2,
+        "tilt_target": 0,
+        "out_voa": 0
+      },
+      "metadata": {
+        "location": {
+          "latitude": 14,
+          "longitude": 0,
+          "city": null,
+          "region": ""
+        }
+      }
+    },
+    {
+      "uid": "Span8",
+      "type": "RamanFiber",
+      "type_variety": "SSMF",
+      "operational": {
+        "temperature": 283,
+        "raman_pumps": [
+          {
+            "power": 200e-3,
+            "frequency": 205e12,
+            "propagation_direction": "counterprop"
+          },
+          {
+            "power": 206e-3,
+            "frequency": 201e12,
+            "propagation_direction": "counterprop"
+          }
+        ]
+      },
+      "params": {
+        "type_variety": "SSMF",
+        "length": 80.0,
+        "loss_coef": 0.2,
+        "length_units": "km",
+        "att_in": 0,
+        "con_in": 0.5,
+        "con_out": 0.5
+      },
+      "metadata": {
+        "location": {
+          "latitude": 15,
+          "longitude": 0,
+          "city": null,
+          "region": ""
+        }
+      }
+    },
+    {
+      "uid": "Edfa8",
+      "type": "Edfa",
+      "type_variety": "std_low_gain",
+      "operational": {
+        "gain_target": 15.0,
+        "delta_p": -2,
+        "tilt_target": 0,
+        "out_voa": 0
+      },
+      "metadata": {
+        "location": {
+          "latitude": 16,
+          "longitude": 0,
+          "city": null,
+          "region": ""
+        }
+      }
+    },
+    {
+      "uid": "Span9",
+      "type": "RamanFiber",
+      "type_variety": "SSMF",
+      "operational": {
+        "temperature": 283,
+        "raman_pumps": [
+          {
+            "power": 200e-3,
+            "frequency": 205e12,
+            "propagation_direction": "counterprop"
+          },
+          {
+            "power": 206e-3,
+            "frequency": 201e12,
+            "propagation_direction": "counterprop"
+          }
+        ]
+      },
+      "params": {
+        "type_variety": "SSMF",
+        "length": 80.0,
+        "loss_coef": 0.2,
+        "length_units": "km",
+        "att_in": 0,
+        "con_in": 0.5,
+        "con_out": 0.5
+      },
+      "metadata": {
+        "location": {
+          "latitude": 17,
+          "longitude": 0,
+          "city": null,
+          "region": ""
+        }
+      }
+    },
+    {
+      "uid": "Edfa9",
+      "type": "Edfa",
+      "type_variety": "std_low_gain",
+      "operational": {
+        "gain_target": 15.0,
+        "delta_p": -2,
+        "tilt_target": 0,
+        "out_voa": 0
+      },
+      "metadata": {
+        "location": {
+          "latitude": 18,
+          "longitude": 0,
+          "city": null,
+          "region": ""
+        }
+      }
+    },
+    {
+      "uid": "Span10",
+      "type": "RamanFiber",
+      "type_variety": "SSMF",
+      "operational": {
+        "temperature": 283,
+        "raman_pumps": [
+          {
+            "power": 200e-3,
+            "frequency": 205e12,
+            "propagation_direction": "counterprop"
+          },
+          {
+            "power": 206e-3,
+            "frequency": 201e12,
+            "propagation_direction": "counterprop"
+          }
+        ]
+      },
+      "params": {
+        "type_variety": "SSMF",
+        "length": 80.0,
+        "loss_coef": 0.2,
+        "length_units": "km",
+        "att_in": 0,
+        "con_in": 0.5,
+        "con_out": 0.5
+      },
+      "metadata": {
+        "location": {
+          "latitude": 19,
+          "longitude": 0,
+          "city": null,
+          "region": ""
+        }
+      }
+    },
+    {
+      "uid": "Edfa10",
+      "type": "Edfa",
+      "type_variety": "std_low_gain",
+      "operational": {
+        "gain_target": 15.0,
+        "delta_p": -2,
+        "tilt_target": 0,
+        "out_voa": 0
+      },
+      "metadata": {
+        "location": {
+          "latitude": 20,
+          "longitude": 0,
+          "city": null,
+          "region": ""
+        }
+      }
+    },
+    {
+      "uid": "Span11",
+      "type": "RamanFiber",
+      "type_variety": "SSMF",
+      "operational": {
+        "temperature": 283,
+        "raman_pumps": [
+          {
+            "power": 200e-3,
+            "frequency": 205e12,
+            "propagation_direction": "counterprop"
+          },
+          {
+            "power": 206e-3,
+            "frequency": 201e12,
+            "propagation_direction": "counterprop"
+          }
+        ]
+      },
+      "params": {
+        "type_variety": "SSMF",
+        "length": 80.0,
+        "loss_coef": 0.2,
+        "length_units": "km",
+        "att_in": 0,
+        "con_in": 0.5,
+        "con_out": 0.5
+      },
+      "metadata": {
+        "location": {
+          "latitude": 21,
+          "longitude": 0,
+          "city": null,
+          "region": ""
+        }
+      }
+    },
+    {
+      "uid": "Edfa11",
+      "type": "Edfa",
+      "type_variety": "std_low_gain",
+      "operational": {
+        "gain_target": 15.0,
+        "delta_p": -2,
+        "tilt_target": 0,
+        "out_voa": 0
+      },
+      "metadata": {
+        "location": {
+          "latitude": 22,
+          "longitude": 0,
+          "city": null,
+          "region": ""
+        }
+      }
+    },
+    {
+      "uid": "Span12",
+      "type": "RamanFiber",
+      "type_variety": "SSMF",
+      "operational": {
+        "temperature": 283,
+        "raman_pumps": [
+          {
+            "power": 200e-3,
+            "frequency": 205e12,
+            "propagation_direction": "counterprop"
+          },
+          {
+            "power": 206e-3,
+            "frequency": 201e12,
+            "propagation_direction": "counterprop"
+          }
+        ]
+      },
+      "params": {
+        "type_variety": "SSMF",
+        "length": 80.0,
+        "loss_coef": 0.2,
+        "length_units": "km",
+        "att_in": 0,
+        "con_in": 0.5,
+        "con_out": 0.5
+      },
+      "metadata": {
+        "location": {
+          "latitude": 23,
+          "longitude": 0,
+          "city": null,
+          "region": ""
+        }
+      }
+    },
+    {
+      "uid": "Edfa12",
+      "type": "Edfa",
+      "type_variety": "std_low_gain",
+      "operational": {
+        "gain_target": 15.0,
+        "delta_p": -2,
+        "tilt_target": 0,
+        "out_voa": 0
+      },
+      "metadata": {
+        "location": {
+          "latitude": 24,
+          "longitude": 0,
+          "city": null,
+          "region": ""
+        }
+      }
+    },
+    {
+      "uid": "Span13",
+      "type": "RamanFiber",
+      "type_variety": "SSMF",
+      "operational": {
+        "temperature": 283,
+        "raman_pumps": [
+          {
+            "power": 200e-3,
+            "frequency": 205e12,
+            "propagation_direction": "counterprop"
+          },
+          {
+            "power": 206e-3,
+            "frequency": 201e12,
+            "propagation_direction": "counterprop"
+          }
+        ]
+      },
+      "params": {
+        "type_variety": "SSMF",
+        "length": 80.0,
+        "loss_coef": 0.2,
+        "length_units": "km",
+        "att_in": 0,
+        "con_in": 0.5,
+        "con_out": 0.5
+      },
+      "metadata": {
+        "location": {
+          "latitude": 25,
+          "longitude": 0,
+          "city": null,
+          "region": ""
+        }
+      }
+    },
+    {
+      "uid": "Edfa13",
+      "type": "Edfa",
+      "type_variety": "std_low_gain",
+      "operational": {
+        "gain_target": 15.0,
+        "delta_p": -2,
+        "tilt_target": 0,
+        "out_voa": 0
+      },
+      "metadata": {
+        "location": {
+          "latitude": 26,
+          "longitude": 0,
+          "city": null,
+          "region": ""
+        }
+      }
+    },
+    {
+      "uid": "Site_B",
+      "type": "Transceiver",
+      "metadata": {
+        "location": {
+          "latitude": 27,
+          "longitude": 0,
+          "city": "Site B",
+          "region": ""
+        }
+      }
+    }
+  ],
+  "connections": [
+    {
+      "from_node": "Site_A",
+      "to_node": "Span1"
+    },
+    {
+      "from_node": "Span1",
+      "to_node": "Edfa1"
+    },
+    {
+      "from_node": "Edfa1",
+      "to_node": "Span2"
+    },
+    {
+      "from_node": "Span2",
+      "to_node": "Edfa2"
+    },
+    {
+      "from_node": "Edfa2",
+      "to_node": "Span3"
+    },
+    {
+      "from_node": "Span3",
+      "to_node": "Edfa3"
+    },
+    {
+      "from_node": "Edfa3",
+      "to_node": "Span4"
+    },
+    {
+      "from_node": "Span4",
+      "to_node": "Edfa4"
+    },
+    {
+      "from_node": "Edfa4",
+      "to_node": "Span5"
+    },
+    {
+      "from_node": "Span5",
+      "to_node": "Edfa5"
+    },
+    {
+      "from_node": "Edfa5",
+      "to_node": "Span6"
+    },
+    {
+      "from_node": "Span6",
+      "to_node": "Edfa6"
+    },
+    {
+      "from_node": "Edfa6",
+      "to_node": "Span7"
+    },
+    {
+      "from_node": "Span7",
+      "to_node": "Edfa7"
+    },
+    {
+      "from_node": "Edfa7",
+      "to_node": "Span8"
+    },
+    {
+      "from_node": "Span8",
+      "to_node": "Edfa8"
+    },
+    {
+      "from_node": "Edfa8",
+      "to_node": "Span9"
+    },
+    {
+      "from_node": "Span9",
+      "to_node": "Edfa9"
+    },
+    {
+      "from_node": "Edfa9",
+      "to_node": "Span10"
+    },
+    {
+      "from_node": "Span10",
+      "to_node": "Edfa10"
+    },
+    {
+      "from_node": "Edfa10",
+      "to_node": "Span11"
+    },
+    {
+      "from_node": "Span11",
+      "to_node": "Edfa11"
+    },
+    {
+      "from_node": "Edfa11",
+      "to_node": "Span12"
+    },
+    {
+      "from_node": "Span12",
+      "to_node": "Edfa12"
+    },
+    {
+      "from_node": "Edfa12",
+      "to_node": "Span13"
+    },
+    {
+      "from_node": "Span13",
+      "to_node": "Edfa13"
+    },
+    {
+      "from_node": "Edfa13",
+      "to_node": "Site_B"
+    }
+  ]
+}
